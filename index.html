@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeev M | AI/ML Engineer</title>
+    <!-- Tailwind CSS for styling -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS for page transitions and minor adjustments -->
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .active { animation: fadeIn 0.5s ease-in-out; }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header / Navigation -->
+    <nav id="header" class="sticky-header shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <button data-page="home" class="nav-button text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
+                        Sanjeev M
+                    </button>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <button data-page="home" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</button>
+                        <button data-page="experience" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</button>
+                        <button data-page="projects" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</button>
+                        <button data-page="publication" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Publication</button>
+                        <button data-page="education" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" type="button" class="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-300 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="hamburger-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button data-page="home" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors">Home</button>
+                <button data-page="experience" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors">Experience</button>
+                <button data-page="projects" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors">Projects</button>
+                <button data-page="publication" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors">Publication</button>
+                <button data-page="education" class="nav-button text-gray-600 hover:bg-gray-200 hover:text-gray-900 block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors">Education</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Page Section -->
+        <section id="home-page" class="page-section active">
+            <div class="text-center py-16 md:py-24 bg-blue-50">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight">Sanjeev M</h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">AI/ML Engineer & Researcher</p>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://github.com/SanjeevM2004" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900" aria-label="GitHub Profile"><svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg></a>
+                    <a href="http://www.linkedin.com/in/sanjeevmtechprophecy" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900" aria-label="LinkedIn Profile"><svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sanjeev.manivannan@gmail.com" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="text-gray-500 hover:text-gray-900" 
+                       aria-label="Email">
+                      <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+                      </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        I am a final year Dual Degree (BTech+MTech) student at IIT Madras, majoring in Biological Engineering with a Minor in Artificial Intelligence and Machine Learning and a specialization in Computational Biology. My passion lies at the intersection of machine learning, generative AI, and computational biology. Skilled in C, C++, Java, and Python, I focus on advanced data science, large language model fine-tuning, and AI-driven product development. I have hands-on experience developing and deploying end-to-end AI solutions, from building agentic RAG systems for finance to creating deepfake detection frameworks. I am driven to leverage interdisciplinary expertise to design scalable, innovative solutions that address complex challenges at the intersection of biology, engineering, and artificial intelligence, and I am actively seeking challenging roles where I can apply my skills in AI and software engineering to solve real-world problems.
+                    </p>
+                </div>
+                <div class="mt-12 bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Core Competencies</h2>
+                      <!-- Advanced -->
+                      <div>
+                        <h3 class="text-lg font-semibold mb-3">Advanced</h3>
+                        <div class="flex flex-wrap gap-3">
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Machine Learning (ML)</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Agent-RAG</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Vector DB</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Semantic Search</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">TensorFlow</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">PyTorch</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Scikit Learn</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">PowerBI</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Azure</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">GCP</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">AWS</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">LangChain</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Docker</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Kubernetes</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">DSA</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">ReactJS</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Blockchain</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">Full-Stack Development</span>
+                          <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">MongoDB</span>
+                        </div>
+                      </div>
+                  
+                      <!-- Intermediate -->
+                      <div>
+                        <h3 class="text-lg font-semibold mb-3">Intermediate</h3>
+                        <div class="flex flex-wrap gap-3">
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">C</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">C++</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">Java</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">Python</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">MATLAB</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">SQL</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">MySQL</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">Frontend</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">AutoCAD</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">JSON</span>
+                          <span class="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-full">GitHub</span>
+                        </div>
+                      </div>
+                  
+                      <!-- Basic -->
+                      <div>
+                        <h3 class="text-lg font-semibold mb-3">Basic</h3>
+                        <div class="flex flex-wrap gap-3">
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">VS Code</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">Linux</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">MS PowerPoint</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">MS Excel</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">LaTeX</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">Canva</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">Hugging Face</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">Virtual Machines</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">Cloud Computing</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">CLI</span>
+                          <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-2 rounded-full">git</span>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Page Section -->
+        <section id="experience-page" class="page-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Professional Experience</h2>
+                <div class="space-y-8">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8"><div class="md:flex"><div class="md:flex-shrink-0"><div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">May 2025 - Jul 2025</div></div><div class="mt-4 md:mt-0 md:ml-6"><h3 class="text-xl font-bold text-gray-900">Industrial and Functional AI Decision Analyst</h3><p class="text-md font-medium text-gray-700">Accenture</p><ul class="mt-4 list-disc list-inside text-gray-600 space-y-2"><li>Architected an AI-driven platform for personalized portfolio optimization and strategic market intelligence.</li><li>Developed a 3-tier asynchronous agentic system featuring validation-based self-healing and autonomous subsystems.</li><li>Engineered RAG sub-agents with vector DBs, finance APIs & bandit RL for risk-based recommendations.</li><li>Built a full-stack app with PowerBI dashboards, live candlesticks, & a thread-specific long-memory chatbot.</li></ul></div></div></div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8"><div class="md:flex"><div class="md:flex-shrink-0"><div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Aug 2025 - Ongoing</div></div><div class="mt-4 md:mt-0 md:ml-6"><h3 class="text-xl font-bold text-gray-900">ML Engineer Intern (Part-time)</h3><p class="text-md font-medium text-gray-700">Agentboutique.ai</p><ul class="mt-4 list-disc list-inside text-gray-600 space-y-2"><li>Performing research on semantic retrieval and agent optimization for intelligent administrative task automation.</li><li>Investigating chunking, indexing (KNN, HNSW), retrievers, and RAG variants to optimize long-context semantic retrieval.</li><li>Iteratively refining a production-grade RAG chatbot with enhanced agent routing and response control.</li></ul></div></div></div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8"><div class="md:flex"><div class="md:flex-shrink-0"><div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Dec 2024 - Jan 2025</div></div><div class="mt-4 md:mt-0 md:ml-6"><h3 class="text-xl font-bold text-gray-900">ML Intern</h3><p class="text-md font-medium text-gray-700">Techconative.ai</p><ul class="mt-4 list-disc list-inside text-gray-600 space-y-2"><li>Developed semantic search for text, image & video embeddings using Chroma, Elasticsearch, and OpenSearch vector DBs.</li><li>Benchmarked Hugging Face & Transformer.js models; fine-tuned CLIP via contrastive learning for multimodal alignment.</li><li>Built FastAPI pipelines for parallel inference and architected a hierarchical agentic chatbot with Google Chat API integration.</li></ul></div></div></div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8"><div class="md:flex"><div class="md:flex-shrink-0"><div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">May 2023 - Jul 2023</div></div><div class="mt-4 md:mt-0 md:ml-6"><h3 class="text-xl font-bold text-gray-900">AI Software Intern</h3><p class="text-md font-medium text-gray-700">HEYDAW Technologies</p><ul class="mt-4 list-disc list-inside text-gray-600 space-y-2"><li>Automated data workflows using GPT-3.5-turbo & fine-tuned GPT-4, enabling speech-prompt collaboration in Reaper Ops.</li><li>Authored 200+ tailored Python functions and optimized GPT-2 tokenization for scalable NLP and decision-making pipelines.</li></ul></div></div></div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8"><div class="md:flex"><div class="md:flex-shrink-0"><div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Dec 2023 - Jan 2024</div></div><div class="mt-4 md:mt-0 md:ml-6"><h3 class="text-xl font-bold text-gray-900">AI Intern</h3><p class="text-md font-medium text-gray-700">Ubud Technologies</p><ul class="mt-4 list-disc list-inside text-gray-600 space-y-2"><li>Implemented Image Segmentation with background removal, and a plug-and-play Diffusion model to design Virtual fitting rooms.</li><li>Exercised use of Generative Adversarial Networks (GANs), Stable Diffusion, ControlNet (pose estimation), LoRA, etc.</li></ul></div></div></div>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mt-16 mb-8">Research & Club Experience</h2>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+                      <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                          <div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">May 2023 - Mar 2024</div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                          <h3 class="text-xl font-bold text-gray-900">DeepFake Detection</h3>
+                          <p class="text-md font-medium text-gray-700">CFI AI Club, Project Member</p>
+                          <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Developed a strong DeepFake Detection Model using CrossViT and achieved 94.8% accuracy on DFDC Dataset.</li>
+                            <li>Built Diffusion-based video generator, Keyframe Extraction, SeqFake Detection & Object-Lane Detection for video detection.</li>
+                            <li>Developed a multimodal DeepFake detection model that integrates audio & frame-wise comparison to identify fake videos.</li>
+                          </ul>
+                      
+                          <!-- GitHub Buttons -->
+                          <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="https://github.com/SanjeevM2004/KeyframeExtraction" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                              Keyframe Extraction
+                            </a>
+                            <a href="https://github.com/SanjeevM2004/ImageDetection" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                              Object-Lane Detection
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+                      <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                          <div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">May 2023 - Mar 2024</div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                          <h3 class="text-xl font-bold text-gray-900">Adobe Behaviour Simulation Challenge</h3>
+                          <p class="text-md font-medium text-gray-700">Inter IIT 12.0, AI Contingent Member</p>
+                          <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>
+                              Secured top spots in kaggle hackathons for contingent selections (Key-point Detection, Doodle Detection). - <a href="https://www.kaggle.com/sanjeevmbe21b034" 
+                                 target="_blank" 
+                                 rel="noopener noreferrer" 
+                                 class="text-blue-600 hover:underline">
+                                Kaggle Profile
+                              </a>
+                            </li>
+                            <li>
+                              Built Bertweet classifier & multimodal LLM pipeline (Flan-T5, Falcon); achieved RMSE 4397 with RoBERTa + ViT.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+                      <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                          <div class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Aug 2022 - Mar 2023</div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-6">
+                          <h3 class="text-xl font-bold text-gray-900">Blockchain & Full Stack Development</h3>
+                          <p class="text-md font-medium text-gray-700">CFP WebOps & Blockchain Club, Project Member</p>
+                          <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Implemented Solidity contracts for crowdfunding; Used crypto wallets (MetaMask) for raw material transactions on our App.</li>
+                            <li>Built React.js applications, including a Movie Browser using Movie Database API.</li>
+                          </ul>
+                      
+                          <!-- GitHub Buttons -->
+                          <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="https://github.com/SanjeevM2004/Moviebrowser.git" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                              Movie Browser App
+                            </a>
+                            <a href="https://github.com/MaqureTeamProject/MaqureProject.git" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                              The DApp
+                            </a>
+                            <a href="https://github.com/SanjeevM2004/Blockchain_crowdfunding.git" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                              Crowdfunding Code
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Page Section -->
+        <section id="projects-page" class="page-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Course Projects</h2>
+                <div class="grid gap-8 md:grid-cols-2">
+                    <div class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col"><div class="flex-grow"><p class="text-sm font-semibold text-blue-600">Optimization Methods in Computer Vision (CS6777)</p><h3 class="text-xl font-bold text-gray-900 mt-1">Image Restoration using SwinIR</h3><p class="mt-3 text-gray-600">Developed a SwinIR model to address image restoration tasks, modifying the structure to enhance performance. Achieved PSNR of 15.86 and SSIM of 0.28 on a combined dataset.</p></div><div class="mt-6 flex space-x-4"><a href="https://github.com/SanjeevM2004/Image_restoration/tree/main" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">GitHub</a><a href="https://github.com/SanjeevM2004/Image_restoration/blob/main/report/CS6777_SANJEEV_M_BE21B034_TPA_REPORT%20(1).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Report</a></div></div>
+                    <div class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col"><div class="flex-grow"><p class="text-sm font-semibold text-blue-600">Multi Armed Bandits (CS6046)</p><h3 class="text-xl font-bold text-gray-900 mt-1">Reproduced Multi Armed Bandits with Abstention</h3><p class="mt-3 text-gray-600">Simulated fixed-regret & fixed-reward abstention-aware algorithms with benchmarking.</p></div><div class="mt-6 flex space-x-4"><a href="https://github.com/SanjeevM2004/Multi_Armed_Bandits_with_Abstention.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">GitHub</a><a href="https://github.com/SanjeevM2004/Multi_Armed_Bandits_with_Abstention/blob/main/MABwAbstention.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Report</a></div></div>
+                    <div class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col"><div class="flex-grow"><p class="text-sm font-semibold text-blue-600">Natural Language Processing (CS6370)</p><h3 class="text-xl font-bold text-gray-900 mt-1">Bridging Lexical and Semantic Gaps in IR</h3><p class="mt-3 text-gray-600">Explored lexical and semantic IR models on the Cranfield dataset and benchmarked them using different metrics.</p></div><div class="mt-6 flex space-x-4"><a href="https://github.com/Jaanav-Mathavan/NLP.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">GitHub</a><a href="https://github.com/Jaanav-Mathavan/NLP/blob/main/NLP_Project_Report.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Report</a></div></div>
+                    <div class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col"><div class="flex-grow"><p class="text-sm font-semibold text-blue-600">Analytical Interpretation of Biological Data (BT3041)</p><h3 class="text-xl font-bold text-gray-900 mt-1">AMP vs Non-AMP Sequence Prediction</h3><p class="mt-3 text-gray-600">Built a 61K-sequence AMP dataset from UniProt/APD; extracted descriptors via ProPy and trained models with r² up to 0.9. Containerized the pipeline using Docker and developed a Streamlit based AMP predictor.</p></div><div class="mt-6 flex space-x-4"><a href="https://github.com/BT3041-TP-Report-Team-7/BT3041-TPA-AMP.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">GitHub</a><a href="https://github.com/BT3041-TP-Report-Team-7/BT3041-TPA-AMP/blob/main/report/BT3041_Group7_Report.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Report</a></div></div>
+                    <div class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col">
+                      <div class="flex-grow">
+                        <p class="text-sm font-semibold text-blue-600">DSA in Biology (BT3051)</p>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1">Data Structures & Advanced Problem Solving</h3>
+                        <p class="mt-3 text-gray-600">
+                          Developed Two-player Tic Tac Toe, Snakegame & Sudoku; Solved 200+ Leetcode problems, Completed programming club Summer Camp.
+                        </p>
+                      </div>
+                  
+                      <!-- Project Links -->
+                      <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="https://github.com/SanjeevM2004/DSA_projects/tree/main/TicTacToe" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                          Tic Tac Toe
+                        </a>
+                        <a href="https://github.com/SanjeevM2004/DSA_projects/tree/main/Snakegame" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                          Snakegame
+                        </a>
+                        <a href="https://github.com/SanjeevM2004/DSA_projects/tree/main/Sudoku" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900">
+                          Sudoku
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publication Page Section -->
+        <section id="publication-page" class="page-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">International Publication</h2>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-gray-900">Learning Self-Supervised Style Representations for Detecting AI-Generated Faces</h3>
+                    <p class="mt-2 text-md font-semibold text-blue-700">1st GenAI Watermarking Workshop, co-located with ICLR 2025, Singapore</p>
+                    <p class="mt-1 text-sm text-gray-500 italic">Sanjeev Manivannan, Tharun Anand, Siva Sankar, Kaushik Mitra</p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">Co-authored a self-supervised deepfake detection framework leveraging transformer-based encoding of stylistic representations in StyleGAN's W latent space. The proposed method achieved over 93% accuracy on unseen GAN and diffusion models, demonstrating strong generalization.</p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="https://openreview.net/pdf?id=yXKnzFxNWK" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">View Paper</a>
+                        <a href="https://drive.google.com/file/d/1H2vOZue8l820ateTlta_60lle1qUFMWp/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Poster</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Page Section -->
+        <section id="education-page" class="page-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid md:grid-cols-5 gap-12">
+                    <div class="md:col-span-5">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-8">Education</h2>
+                        <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-gray-900">Indian Institute of Technology, Madras</h3>
+                            <p class="text-md font-medium text-gray-700 mt-1">Dual Degree in Biological Engineering</p>
+                            <p class="text-md text-gray-600">Minor in CS-AI/ML & Computational Biology Stream</p>
+                            <div class="flex justify-between items-baseline mt-2"><p class="text-sm font-semibold text-blue-600">2020 - 2025</p><p class="text-sm font-bold text-gray-800">CGPA: 8.26</p></div>
+                            <hr class="my-6"/>
+                            <div class="mt-4">
+                                <h4 class="text-lg font-bold text-gray-800">DAV Boys Senior Secondary School</h4>
+                                <div class="flex justify-between items-baseline mt-1"><p class="text-sm text-gray-600">Class XII (CBSE) (2021)</p><p class="text-sm font-semibold text-gray-700">98.2%</p></div>
+                                <div class="flex justify-between items-baseline mt-1"><p class="text-sm text-gray-600">Class X (CBSE) (2019)</p><p class="text-sm font-semibold text-gray-700">94.8%</p></div>
+                            </div>
+                        </div>
+                        <div class="mt-12">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-8">Achievements</h2>
+                            <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                                <ul class="space-y-3 list-disc list-inside text-gray-600">
+                                    <li><b>Ranked 1st</b> in <b>Accenture Strategy Connect 2024</b> with GenAI strategy to predict misinformation in social media & product reviews among 9600 candidates.</li>
+                                    <li>Contributed and <b>Secured Bronze</b> in the <b>Adobe behavior simulation challenge</b> hosted by <b>Adobe Media & Data Science Research</b> in Inter IIT Tech Meet 12.0.</li>
+                                    <li>Participated in the <b>Amazon ML challenge</b> and <b>secured Rank 378 among 75000+ participants</b> based on <b>OCR based entity extraction</b> from product images.</li>
+                                    <li><b>Secured 4th place</b> in <b>BlackOut Hackathon 2023</b> (among 300-400 participants on 2 Machine learning problem statements hosted by SRM University)</li>
+                                    <li>
+                                      <b>Golden Badge</b> in 
+                                      <a href="https://www.hackerrank.com/profile/sanjeev_manivan1" 
+                                         target="_blank" 
+                                         rel="noopener noreferrer" 
+                                         class="text-blue-600 hover:underline">
+                                        <b>HackerRank</b>
+                                      </a> 
+                                      and <b>Bronze Badge</b> in 
+                                      <a href="https://www.codechef.com/users/sanjeevm" 
+                                         target="_blank" 
+                                         rel="noopener noreferrer" 
+                                         class="text-blue-600 hover:underline">
+                                        <b>CodeChef</b>
+                                      </a>.
+                                    </li>
+                                    <li><b>Secured 1st Place</b> in <b>National Science Olympiad (NSO)</b> & <b>International Maths Olympiad (IMO)</b> in school.</li>
+                                    <li>Qualified <b>PRMO</b> (Pre-regional Maths Olympiad) <b>Round 1</b>.</li>
+                                    <li><b>Secured 1st place</b> in <b>The Times NIE National Aptitude challenge</b> in school.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2024 Sanjeev M. All Rights Reserved.</p>
+            <p class="text-sm mt-1">Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for page navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const pageSections = document.querySelectorAll('.page-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            function showPage(pageId) {
+                pageSections.forEach(section => section.classList.remove('active'));
+                const activePage = document.getElementById(pageId + '-page');
+                if (activePage) activePage.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const pageId = this.dataset.page;
+                    showPage(pageId);
+                    if (mobileMenu.classList.contains('block')) {
+                        mobileMenu.classList.remove('block');
+                        mobileMenu.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+            });
+
+            mobileMenuButton.addEventListener('click', function() {
+                const isMenuOpen = mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('block', !isMenuOpen);
+                hamburgerIcon.classList.toggle('hidden', !isMenuOpen);
+                closeIcon.classList.toggle('hidden', isMenuOpen);
+            });
+
+            showPage('home');
+        });
+    </script>
+
+</body>
+</html>
